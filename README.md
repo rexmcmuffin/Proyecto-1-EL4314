@@ -41,3 +41,23 @@ en espera.
 En todo momento el simulador debe de indicar al usuario el estado de ejecucion de las instrucciones la RAT y las RS , de manera
 que permita conocer el avance del programa. Una vez finalizada la simulacion se debe de indicar la cantidad de ciclos de reloj
 utilizados para ejecutar el programa 
+
+
+Instrucciones de uso:
+
+El archivo de texto con el nombre de Codigo_de_entrada.txt, es el archivo en el cual se colocara la serie de instrucciones que el simulador se encargara de poner a prueba
+las mismas se deben de colocar en este orden: 
+
+MUL R2, R0, R1
+ADD R4, R2, R3
+ADD R6, R1, R5
+ADD R9, R7, R8
+MUL R10, R6, R9
+ADD R4, R4, R10
+
+Siendo el Registro R0 el primero y el R11 el ultimo
+
+
+En el subprograma llamado Confuguracion se puede establecer el tamaño de las reservation station para la suma y resta y para la multiplicacion, los valores iniciales de cada registro
+se pueden cambiar en este subprograma en el vector llamado registro. Las variables llamadas Ciclos_sum y Ciclos_mul son los valores que posee cada operacion en ciclos, segun el instru-
+tivo del proyecto debian de ser de 4 para suma y resta y de 6 para la multiplicacion.
